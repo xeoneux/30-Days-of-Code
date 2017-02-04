@@ -7,18 +7,12 @@ class Difference {
     }
 
     func computeDifference() {
-        var maximum = 0
-
-        for i in 0 ..< elements.count {
-            for j in 0 ..< elements.count {
-                let absolute = abs(elements[i] - elements[j])
-                if absolute > maximum {
-                    maximum = absolute
-                }
-            }
-        }
-
-        maximumDifference = maximum
+        // Satisfies constraint specified in project
+        guard elements.count >= 1, elements.count <= 100 else { return }
+        // Sort the array in ascending order
+        elements.sort{$0 < $1}
+        // Compute the difference between greatest and least in the array.
+        maximumDifference = elements.last! - elements.first!
     }
 }
 
