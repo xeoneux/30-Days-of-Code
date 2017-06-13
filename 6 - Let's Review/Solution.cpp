@@ -6,7 +6,7 @@ int main() {
     int N;
     cin >> N;
 
-    string tmp;
+    //string tmp;//no need of this variable;
 
     for (int i = 0; i < N; i++) {
         string str;
