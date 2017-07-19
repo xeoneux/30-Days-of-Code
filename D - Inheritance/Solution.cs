@@ -11,7 +11,7 @@ class Person
     {
         this.firstName = firstName;
         this.lastName = lastName;
-        id = identification;
+        this.id = identification;
     }
     public void printPerson()
     {
