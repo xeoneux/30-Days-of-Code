@@ -1,10 +1,26 @@
-let i: number = 4;
-let d: number = 4.0;
-let s: string = "HackerRank";
-let b: boolean = true;
+import readline = require("readline");
 
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-console.log(i);
-console.log(d);
-console.log(s);
-console.log(b);
+const getline = () => {
+  return new Promise(resolve => {
+    rl.question("", resolve);
+  });
+};
+
+const i = 4;
+const d = 4.0;
+const s = "HackerRank ";
+
+(async () => {
+  const i2 = await getline();
+  const d2 = await getline();
+  const s2 = await getline();
+  console.log(i + parseInt(i2.toString()));
+  console.log(d + parseFloat(d2.toString()));
+  console.log(s + s2.toString());
+  rl.close();
+})();
