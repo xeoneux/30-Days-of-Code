@@ -1,12 +1,27 @@
-let N: number = 10;
-if (N % 2 !== 0) {
-  console.log("Weird");
-} else {
-  if (N <= 5) {
-    console.log("Not Weird");
-  } else if (N <= 20) {
+import readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+const getline = () => {
+  return new Promise(resolve => {
+    rl.question("", resolve);
+  });
+};
+
+(async () => {
+  let N: number = parseInt((await getline()).toString());
+  if (N % 2 !== 0) {
     console.log("Weird");
   } else {
-    console.log("Not Weird");
+    if (N <= 5) {
+      console.log("Not Weird");
+    } else if (N <= 20) {
+      console.log("Weird");
+    } else {
+      console.log("Not Weird");
+    }
   }
-}
+})();
