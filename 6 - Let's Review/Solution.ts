@@ -12,25 +12,24 @@ const getline = () => {
 };
 
 (async () => {
-  let N = parseInt((await getline()).toString());
+  const N = parseInt((await getline()).toString());
+
   for (let i = 0; i < N; i++) {
-    let str: string = (await getline()).toString();
-    let charArray = str.split("(?!^)");
-    for (let j = 0; j < charArray.length; j++) {
-      if (j % 2 == 0) {
-        console.log(charArray[j]);
-      }
-    }
+    const str = (await getline()).toString();
+    const charArray = str.split("");
 
-    console.log(" ");
+    let printStr = "";
 
-    for (let j = 0; j < charArray.length; j++) {
-      if (j % 2 != 0) {
-        console.log(charArray[j]);
-      }
-    }
+    for (let j = 0; j < charArray.length; j++)
+      if (j % 2 == 0) printStr += charArray[j];
 
-    console.log("");
+    printStr += " ";
+
+    for (let j = 0; j < charArray.length; j++)
+      if (j % 2 != 0) printStr += charArray[j];
+
+    console.log(printStr);
   }
-  process.exit(0);
+
+  rl.close();
 })();
