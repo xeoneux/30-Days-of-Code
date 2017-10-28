@@ -23,10 +23,10 @@ class Person {
 
 class Solution {
   public static Main() {
-    let T: number = 25;
+    const T = 25;
     for (let i = 0; i < T; i++) {
-      let age = 20;
-      let p = new Person(age);
+      const age = 20;
+      const p = new Person(age);
       p.amIOld();
       for (let j = 0; j < 3; j++) {
         p.yearPasses();
