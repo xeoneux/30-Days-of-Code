@@ -12,11 +12,12 @@ const getline = () => {
 };
 
 (async () => {
-  let mealCost: number = parseFloat((await getline()).toString());
-  let tipPercent: number = parseFloat((await getline()).toString());
-  let taxPercent: number = parseFloat((await getline()).toString());
-  let tip = tipPercent * mealCost / 100;
-  let tax = taxPercent * mealCost / 100;
-  let totalCost = tip + tax + mealCost;
-  console.log("The total meal cost is %i dollars.", totalCost);  
+  const mealCost = parseFloat((await getline()).toString());
+  const tipPercent = parseInt((await getline()).toString());
+  const taxPercent = parseInt((await getline()).toString());
+  const tip = tipPercent * mealCost / 100;
+  const tax = taxPercent * mealCost / 100;
+  const totalCost = tip + tax + mealCost;
+  console.log(`The total meal cost is ${totalCost} dollars.`);
+  rl.close();
 })();
