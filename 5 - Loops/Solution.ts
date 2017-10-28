@@ -16,4 +16,5 @@ const getline = () => {
   for (let i = 1; i < 11; i++) {
     console.log(N + " x " + i + " = " + N * i);
   }
+  rl.close();
 })();
