@@ -28,19 +28,19 @@ class Person {
     }
 }
 
-var t = Int(readLine(stripNewline: true)!)!
+let t = Int(readLine()!)!
 
-while t > 0 {
-    let age = Int(readLine(stripNewline: true)!)!
-    var p = Person(initialAge: age)
+for _ in 0..<t {
+    let age = Int(readLine()!)!
+    let p = Person(initialAge: age)
+
     p.amIOld()
 
-    for i in 1 ... 3 {
+    for i in 1...3 {
         p.yearPasses()
     }
 
     p.amIOld()
-    print("")
 
-    t = t - 1 // decrement t
+    print("")
 }
