@@ -1,9 +1,9 @@
-var arr = Array(count: 6, repeatedValue: Array(count: 6, repeatedValue: 0))
+var arr = Array(repeating: Array( repeating: 0, count: 6), count: 6)
 
 for i in 0 ... 5 {
-    let tmp = readLine()!.characters.split(" ").map(String.init)
+    let tmp = readLine()!.components(separatedBy: " ").map{ Int($0)! }
     arr[i] = tmp.map {
-        Int($0)!
+        Int($0)
     }
 }
 
