@@ -2,32 +2,38 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int N = in.nextInt();
-
-        in.nextLine();
-
-        for (int i = 0; i < N; i++) {
-            String string = in.nextLine();
-            char[] charArray = string.toCharArray();
-
-            for (int j = 0; j < charArray.length; j++) {
-                if (j % 2 == 0) {
-                    System.out.print(charArray[j]);
-                }
-            }
-
-            System.out.print(" ");
-
-            for (int j = 0; j < charArray.length; j++) {
-                if (j % 2 != 0) {
-                    System.out.print(charArray[j]);
-                }
-            }
-
-            System.out.println();
+       Scanner in=new Scanner(System.in);
+       int n=in.nextInt();
+       in.nextLine();
+       String str[]=new String[n];
+       for(int i=0;i<n;i++)
+       {
+           str[i]=in.nextLine();
+           
+       }
+      
+       int k=0;
+       for(k=0;k<n;k++)
+       {
+            String a=" ",b=" ";
+     for(int i=0;i<str[k].length();i++)
+     {
+         if(i%2==0)
+         {
+             b=b+str[k].charAt(i);
+            
+         }
+        else
+        {
+            a=a+str[k].charAt(i);
         }
+        
+     }
+     System.out.println(b+""+a);
+     
+       }
+       System.out.println();
+    
 
-        in.close();
     }
 }
