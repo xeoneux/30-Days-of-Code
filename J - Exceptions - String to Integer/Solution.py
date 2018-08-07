@@ -1,4 +1,4 @@
 try:
-    print(int(input()))
+    print(int(input().strip()))
 except ValueError:
     print("Bad String")
