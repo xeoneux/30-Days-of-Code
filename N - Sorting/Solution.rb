@@ -5,7 +5,6 @@ a = a.split(' ').map(&:to_i)
 # Write Your Code Here
 i=0
 numSwaps=0
-
 while n>i do
     j=0
     while n-1>j do
