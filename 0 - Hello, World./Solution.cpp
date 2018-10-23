@@ -11,6 +11,5 @@ int main() {
 
     // Write the second line of output
     cout << inputString << endl;
-
     return 0;
 }
