@@ -22,4 +22,5 @@ int main() {
     printf("The total meal cost is %i dollars.", totalCost);
 
     return 0;
+    
 }
