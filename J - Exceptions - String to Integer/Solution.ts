@@ -1,19 +1,15 @@
-import * as readline from "readline";
+import readline from "readline";
 
-const main = async () => {
-  let rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-  rl.question("Enter Number", answer => {
-    try {
-      console.log(parseFloat(answer));
-    } catch (error) {
-      console.log("Bad String");
-    }
-    rl.close();
-  });
-};
-
-main();
+rl.question("Enter Number", answer => {
+  try {
+    console.log(parseFloat(answer));
+  } catch (error) {
+    console.log("Bad String");
+  }
+  rl.close();
+});
