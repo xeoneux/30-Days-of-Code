@@ -33,7 +33,7 @@ class Difference {
   }
 }
 
-const main = async () => {
+(async () => {
   parseInt((await getline()).toString());
   let a = (await getline())
     .toString()
@@ -44,6 +44,4 @@ const main = async () => {
   d.computeDifference();
 
   console.log(d.maximumDifference);
-};
-
-main();
+})();
