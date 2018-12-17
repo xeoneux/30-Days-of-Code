@@ -1,23 +1,14 @@
-#!/bin/ruby
-
-require 'json'
-require 'stringio'
-
 n = gets.to_i
 sum = 0
 max = 0
 
- while n > 0 
-     if (n%2==1)
-         sum+=1
-         if sum > max 
-          max = sum 
-         end
-         
-     else sum = 0
-     end
-     n = n /2
+while n > 0
+  if n.odd?
+    sum += 1
+    max = sum if sum > max
+  else sum = 0
+  end
+  n /= 2
 end
- 
- print max  
 
+print max
