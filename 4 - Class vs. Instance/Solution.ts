@@ -21,19 +21,13 @@ class Person {
   }
 }
 
-class Solution {
-  public static Main() {
-    const T = 25;
-    for (let i = 0; i < T; i++) {
-      const age = 20;
-      const p = new Person(age);
-      p.amIOld();
-      for (let j = 0; j < 3; j++) {
-        p.yearPasses();
-      }
-      p.amIOld();
-    }
+const T = 25;
+for (let i = 0; i < T; i++) {
+  const age = 20;
+  const p = new Person(age);
+  p.amIOld();
+  for (let j = 0; j < 3; j++) {
+    p.yearPasses();
   }
+  p.amIOld();
 }
-
-Solution.Main();
