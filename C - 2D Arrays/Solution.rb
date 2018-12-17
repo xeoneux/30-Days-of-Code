@@ -1,10 +1,4 @@
 #!/bin/ruby
-
-require 'json'
-require 'stringio'
-
-
-
 arr = Array.new(6)
 max = -10000000
 6.times do |i|
