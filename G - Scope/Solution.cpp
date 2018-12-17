@@ -4,8 +4,6 @@
 
 using namespace std;
 
-using namespace std;
-
 class Difference {
 private:
     vector<int> elements;
