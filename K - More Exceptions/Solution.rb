@@ -1,17 +1,16 @@
 class RangeError < StandardError
 end
+
 # Write your code here
 class Calculator
     def power(n,p)
-        if n < 0 || p < 0 
+        if n < 0 || p < 0
             raise RangeError.new "n and p should be non-negative"
         else
-        return n**p
-        end 
-        
+            return n**p
+        end
     end
 end
-
 
 myCalculator = Calculator.new()
 
