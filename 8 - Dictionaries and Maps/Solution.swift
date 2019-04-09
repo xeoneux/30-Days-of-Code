@@ -1,19 +1,21 @@
+// Enter your code here. Read input from STDIN. Print output to STDOUT
+import Foundation
 let n = Int(readLine()!)!
+var phonebook = [String:String]()
 
-var phoneBook = [String: Int]()
-
-for _ in 0...n - 1 {
-    // read contacts into phone book
-    var contact = readLine()!.characters.split(separator: " ").map(String.init)
-    phoneBook[contact[0]] = contact[1]
+for _ in 0...n-1 {
+    let contact = readLine()!
+    let person = contact.components(separatedBy: " ")
+    phonebook[person[0]] = person[1]
+    
 }
+
 
 var queryName = readLine()
 while queryName != nil {
-    if let number = phoneBook[queryName!] {
-        print("\(queryName!)=\(phoneBook[queryName!]!)")
-    }
-    else {
+    if phonebook.keys.contains(queryName!){
+        print("\(queryName!)=\(phonebook[queryName!]!)")
+    }else{
         print("Not found")
     }
     queryName = readLine()
