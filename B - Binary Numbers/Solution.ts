@@ -7,19 +7,14 @@ const rl = readline.createInterface({
 
 rl.question("", inputString => {
   
-  var binaryN: String = ""
   var maximum: number = 0
+  var result: number = 0
 
-  while(inputString>0){
-    binaryN = (String)(~~(inputString%2)) + binaryN
-    inputString = ~~(inputString/2)
-  }
-
-  for(var i = 0, z = 0;i < binaryN.length; i++){
-    binaryN[i] == '1' ? z++ : z = 0
-
-    if(z > maximum)
-      maximum = z
+  while(inputString > 0) {
+    ~~(inputString % 2) == 1 ? result++ : result = 0
+    if(result > maximum)
+      maximum = result
+    inputString = ~~(inputString / 2)
   }
 
   console.log(maximum)
