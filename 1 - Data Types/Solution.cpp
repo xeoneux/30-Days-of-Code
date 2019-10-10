@@ -24,14 +24,17 @@ int main() {
     getline(cin, s2);
 
     // Print the sum of both integer variables on a new line.
-    printf("%i\n", i + i2);
+    i=i+i2;
+    cout<<i<<endl;
 
     // Print the sum of the double variables on a new line.
-    printf("%.1f\n", d + d2);
+    // Used setprecision(1) to get at least 1 digit after decimal point
+    d=d+d2;
+    cout<<fixed<<setprecision(1)<<d<<endl;
 
     // Concatenate and print the String variables on a new line
     // The 's' variable above should be printed first.
-    cout << s + s2 << endl;
+    cout << s << s2 << endl;
 
     return 0;
 }
