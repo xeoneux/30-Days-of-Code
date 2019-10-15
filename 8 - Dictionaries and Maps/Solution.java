@@ -1,27 +1,27 @@
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
-class Solution {
-    public static void main(String[] argh) {
+class Solution{
+    public static void main(String []argh){
         Scanner in = new Scanner(System.in);
-
         int n = in.nextInt();
-        HashMap<String, Integer> phoneBook = new HashMap<String, Integer>();
-
-        for (int i = 0; i < n; i++) {
+        
+        Map<String,Integer> myMap = new HashMap<String,Integer>(); 
+        
+        for(int i = 0; i < n; i++){
             String name = in.next();
             int phone = in.nextInt();
-            phoneBook.put(name, phone);
+            // Write code here
+            myMap.put(name, phone);
         }
-
-        while (in.hasNext()) {
-            String name = in.next();
-            if (phoneBook.containsKey(name)) {
-                int phone = phoneBook.get(name);
-                System.out.println(name + "=" + phone);
-            } else System.out.println("Not found");
+        while(in.hasNext()){
+            String s = in.next();
+            // Write code here
+            if (myMap.get(s)!=null)                
+                System.out.println(s + "=" + myMap.get(s) );
+            else
+                System.out.println("Not found");
         }
-
         in.close();
     }
 }
