@@ -5,12 +5,12 @@ using namespace std;
 
 int main() {
     int N;
+    string name;
     cin >> N;
 
     map<string, int> phone_book;
 
     for (int i = 0; i < N; i++) {
-        string name;
         cin >> name;
 
         if (!phone_book[name]) {
@@ -18,9 +18,7 @@ int main() {
         }
     }
 
-    for (int i = 0; i < N; i++) {
-        string name;
-        cin >> name;
+    while (cin>>name) {
 
         if (phone_book[name]) {
             cout << name << "=" << phone_book[name] << endl;
