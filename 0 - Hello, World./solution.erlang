@@ -1,0 +1,9 @@
+-module(solution).
+-export([main/0]).
+
+main() ->
+  Input = io:get_line(""),
+  read(Input).
+
+read(A) ->
+  io:format("Hello, World.\n~s", [A]).
