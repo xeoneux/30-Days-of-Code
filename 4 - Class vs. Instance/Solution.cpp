@@ -46,7 +46,7 @@ int main() {
             p.yearPasses();
         }
         p.amIOld();
-        cout << '\n';
+        
     }
 
     return 0;
