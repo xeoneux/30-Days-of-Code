@@ -1,0 +1,7 @@
+printStringNTimes 0 = return ()
+printStringNTimes n =
+ do
+  putStrLn "a string"
+  printStringNTimes (n-1)
+
+main = printStringNTimes 10
