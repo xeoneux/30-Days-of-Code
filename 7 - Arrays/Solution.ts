@@ -16,9 +16,9 @@ const getline = () => {
   var numbers = (await getline()).toString();
   var array = numbers.split(" ", n);
   var output = "";
-  for(let i=n-1; i>=0; i--){
+  for(let i=n-1; i>=0; i--) {
     output += (array[i] + " ");
   }
-  console.log(output)
+  console.log(output);
   rl.close();
 })();
