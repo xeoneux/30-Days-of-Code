@@ -1,4 +1,3 @@
-
 // Declare second integer, double, and String variables.
 $f='fgets';
 
