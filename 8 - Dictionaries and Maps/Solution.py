@@ -1,19 +1,20 @@
-num = int(input())
+dicts={}
+k=[]
+n=int(input())
+for _ in range(n):
+    entry=input().split(" ")
+    dicts[entry[0]]=entry[1]
 
-phone_book = {}
 
-for i in range(0, num):
-    entry = str(input()).split(" ")
+while True:
+    try:
+        line = input()
+    except EOFError:
+        break
+    k.append(line)
 
-    name = entry[0]
-    phone = int(entry[1])
-    phone_book[name] = phone
-
-for j in range(0, num):
-    name = str(input())
-
-    if name in phone_book:
-        phone = phone_book[name]
-        print(name + "=" + str(phone))
+for i in k:
+    if i in dicts:
+        print("{}={}".format(i,dicts[i]))
     else:
-        print("Not found")
+        print("Not found")    
