@@ -1,24 +1,20 @@
-from abc import ABCMeta, abstractmethod
-
-
-class AdvancedArithmetic(object, metaclass=ABCMeta):
-    @abstractmethod
-    def divisorSum(self, n):
-        pass
+class AdvancedArithmetic(object):
+    def divisorSum(n):
+        raise NotImplementedError
 
 
 class Calculator(AdvancedArithmetic):
     def divisorSum(self, n):
-        result = 0
-        for i in range(n):
-            if n % i == 0:
-                result += i
-        return sum
+        s = 0
+        for i in range(1,n+1):
+            if (n%i == 0):
+                s+=i
+        return s
 
 
 n = int(input())
 
 myCalculator = Calculator()
-total = myCalculator.divisorSum(n)
-print("I implemented: " + str(AdvancedArithmetic))
-print(total)
+s = my_calculator.divisorSum(n)
+print("I implemented: " + type(my_calculator).__bases__[0].__name__)
+print(s)
