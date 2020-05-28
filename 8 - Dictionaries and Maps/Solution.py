@@ -1,22 +1,15 @@
-import sys
-inputList=[]
-
-for line in sys.stdin:
-    inputList.append(line)
-
-n = int(inputList[0])
-entries = inputList[1:n+1]
-queries = inputList[n+1:]
-
-phoneBook = {}
-
-for entry in entries:
-    name, id = entry.split()
-    phoneBook[name] = id
-
-for query in queries:
-    stripQuery = query.rstrip() #Eliminates the newline character
-    if stripQuery in phoneBook:
-        print(stripQuery + "=" + str(phoneBook[stripQuery]))
-    else:
-        print("Not found")
+n=int(input())
+phonebook={}
+for i in range (n):
+   x=input().split()
+   phonebook[x[0]]=x[1]
+for i in range (n):
+    try:
+        query =input()
+        if query in phonebook:
+            queryphone =phonebook[query]
+            print(query+'='+queryphone)
+        else:
+            print('Not found')
+    except:break
+        
