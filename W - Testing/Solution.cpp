@@ -1,17 +1,33 @@
-#include <iostream>
+class TestDataEmptyArray {
+public:
+    static vector<int> get_array() {
+        return {};
+    }
 
-using namespace std;
+};
 
-int main() {
-    cout << 5;
-    cout << "4 3";
-    cout << "0 -3 4 2";
-    cout << "5 2";
-    cout << "0 -3 4 2 2";
-    cout << "3 3";
-    cout << "0 -3 4";
-    cout << "7 2";
-    cout << "0 -3 1 1 1 1 1";
-    cout << "6 3";
-    cout << "0 -3 4 2 1 1";
-}
+class TestDataUniqueValues {
+public:
+    static vector<int> get_array() {
+     return {1,2};
+    }
+
+    static int get_expected_result() {
+        return 0;
+    }
+
+};
+
+class TestDataExactlyTwoDifferentMinimums {
+public:
+    static vector<int> get_array() {
+        return {2,1,1};
+    }
+
+    static int get_expected_result() {
+        return 1;
+    }
+
+
+
+};
