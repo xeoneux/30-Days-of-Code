@@ -10,7 +10,8 @@ int main() {
         int num = stoi(str);
         cout << num;
     }
-    catch (exception) {
+    catch (...) {
         cout << "Bad String";
     }
+    return 0;
 }
