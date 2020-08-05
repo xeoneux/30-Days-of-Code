@@ -28,7 +28,7 @@ class Student : Person
         this.testScores = testScores;
     }
 
-    public char calculate()
+    public char Calculate()
     {
         int total = 0;
 
@@ -64,6 +64,6 @@ class Solution
 
         Student s = new Student(firstName, lastName, id, scores);
         s.printPerson();
-        Console.WriteLine("Grade: " + s.calculate() + "\n");
+        Console.WriteLine("Grade: " + s.Calculate() + "\n");
     }
 }
