@@ -1,6 +1,6 @@
 import java.lang.Math.round
 
-fun main(args: Array<String>) {
+fun main() {
         val mealCost = readLine()!!.toDouble()
         val tipPercent = readLine()!!.toInt()
         val taxPercent = readLine()!!.toInt()
