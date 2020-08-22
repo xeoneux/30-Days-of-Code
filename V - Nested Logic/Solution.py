@@ -1,12 +1,8 @@
-actually = str(input()).split(" ")
-da = int(actually[0])
-ma = int(actually[1])
-ya = int(actually[2])
+actually = list(map(int, input().split()))
+da, ma, ya = actually
 
-expected = str(input()).split(" ")
-de = int(expected[0])
-me = int(expected[1])
-ye = int(expected[2])
+expected = list(map(int, input().split()))
+de, me, ye = expected
 
 fine = 0
 
