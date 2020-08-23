@@ -5,12 +5,4 @@ for i in range(T):
     N = int(tmp[0])
     K = int(tmp[1])
 
-    maximum = 0
-
-    for j in range(1, N):
-        for k in range(j + 1, N + 1):
-            h = j & k
-            if K > h > maximum:
-                maximum = h
-
-    print(maximum)
+    print(K-1 if ((K-1) | K) <= N else K-2)
