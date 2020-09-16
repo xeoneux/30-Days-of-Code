@@ -19,7 +19,7 @@ int main() {
     double tax = taxPercent * mealCost / 100;
 
     int totalCost = (int) round(tip + tax + mealCost);
-    printf("The total meal cost is %i dollars.", totalCost);
+    cout<<totalCost;
 
     return 0;
 }
