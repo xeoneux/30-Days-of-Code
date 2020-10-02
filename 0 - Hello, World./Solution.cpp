@@ -3,6 +3,8 @@
 using namespace std;
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     string inputString; // declare a variable to hold our input
     getline(cin, inputString); // get a line of input from cin and save it to our variable
 
