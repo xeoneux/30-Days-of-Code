@@ -22,7 +22,7 @@ class Student(Person):
 
         avg = total / len(self.testScores)
 
-        if 90 <= avg <= 100:
+        if 90 >= avg <= 100:
             return 'O'
         if 80 <= avg < 90:
             return 'E'
