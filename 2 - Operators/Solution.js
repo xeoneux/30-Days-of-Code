@@ -1,10 +1,7 @@
-typeof "John"                 
-typeof 3.14                   
-typeof NaN                    
-typeof false                  
-typeof [1, 2, 3, 4]           
-typeof {name:'John', age:34}  
-typeof new Date()             
-typeof function () {}         
-typeof myCar                  
-typeof null                   
+function solve(meal_cost, tip_percent, tax_percent) {
+    let tip = meal_cost * tip_percent / 100
+    let tax = meal_cost * tax_percent / 100
+    let total = meal_cost + tip + tax;
+    
+    console.log(Math.round(total))
+}
