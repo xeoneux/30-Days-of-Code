@@ -5,7 +5,7 @@
 
 int main() {
 
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */      int tests;
+    int tests;
     scanf("%d", &tests);
     
     for (int i = 0; i < tests; i++) {
