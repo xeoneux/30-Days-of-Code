@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.rmd": "markdown",
+        "day 18 queue.C": "cpp",
+        "SolutionQueue.C": "cpp",
+        "SolutionStacks.C": "cpp"
+    }
+}
