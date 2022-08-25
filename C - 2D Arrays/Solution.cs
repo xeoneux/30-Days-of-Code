@@ -18,10 +18,13 @@ class Solution
 {
     public static void Main(string[] args)
     {
-        List<List<int>> arr = new List<List<int>>();
         
         int[] sum = new int[16];
         int hourglass = 0;
+        
+        List<List<int>> arr = new List<List<int>>();
+        
+       
 
         for (int i = 0; i < 6; i++)
         {
