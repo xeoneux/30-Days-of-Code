@@ -1,35 +1,52 @@
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Collections;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
+using System.Text;
 using System;
+
+
 
 class Solution
 {
-    static void Main(String[] args)
+    public static void Main(string[] args)
     {
-        var a = int.Parse(Console.ReadLine());
-        var ar = Console.ReadLine().Split(' ');
-        var arr = Array.ConvertAll(ar, int.Parse);
+        int n = Convert.ToInt32(Console.ReadLine().Trim());
 
-        int numSwaps = 0;
-        for (int i = 0; i < a; i++)
-        {
-            for (int j = 0; j < a - 1; j++)
-            {
-                if (arr[j] > arr[j + 1])
-                {
-                    int tmp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = tmp;
+        List<int> a = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
+
+        // Write your code here
+       int numSwaps=0;
+        
+        for(int i=0; i < n; i++){
+             
+           
+            for(int j=0; j < n-1; j++){
+                
+                if(a[j] > a[j+1]){
+                    int tmp=a[j];
+                    a[j]=a[j+1];
+                    a[j+1]=tmp;
                     numSwaps++;
                 }
             }
-
-            if (numSwaps == 0)
-            {
+            
+            if(numSwaps == 0){
                 break;
             }
         }
-
-        Console.WriteLine("Array is sorted in " + numSwaps + " swaps.");
-        Console.WriteLine("First Element: " + arr[0]);
-        Console.WriteLine("Last Element: " + arr[arr.Length - 1]);
+        
+        Console.WriteLine($"Array is sorted in {numSwaps} swaps.");
+        Console.WriteLine($"First Element: {a[0]}");
+        Console.WriteLine($"Last Element: {a[n-1]}");
+         
+        
     }
 }
