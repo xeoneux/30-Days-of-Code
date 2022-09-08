@@ -1,29 +1,25 @@
 using System;
-
-class Solution
-{
-    public static bool isPrime(int n)
-    {
-        for (int i = 2; i <= Math.Sqrt(n); i++)
-        {
-            if (n % i == 0)
-            {
-                return false;
+using System.Collections.Generic;
+using System.IO;
+class Solution {
+    static void Main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+        
+        int numberOfInputs=Convert.ToInt32(Console.ReadLine());
+        int i,j, inputNumber;
+        string output;
+        
+        for(i=1; i<=numberOfInputs; i++){
+            inputNumber= Convert.ToInt32(Console.ReadLine());
+            for(j=2; j<=inputNumber/j; j++){
+                if(inputNumber % j == 0){
+                    inputNumber = 1;
+                }
             }
+            
+            output= inputNumber == 1 ? "Not prime" : "Prime";
+            Console.WriteLine(output);
         }
-        return true;
-    }
-
-    static void Main(String[] args)
-    {
-        var T = int.Parse(Console.ReadLine());
-
-        for (int i = 0; i < T; i++)
-        {
-            int n = int.Parse(Console.ReadLine());
-
-            if (n >= 2 && isPrime(n)) Console.WriteLine("Prime");
-            else Console.WriteLine("Not prime");
-        }
+        
     }
 }
