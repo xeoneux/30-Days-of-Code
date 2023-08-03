@@ -21,3 +21,12 @@ print(d + d2)
 # Concatenate and print the String variables on a new line
 # The 's' variable above should be printed first.
 print(s + s2)
+
+# complex type
+c = 5 + 2j
+
+# the real part of the complex number
+print(c.real)
+
+# the imaginary part of the number
+print(c.imag)
